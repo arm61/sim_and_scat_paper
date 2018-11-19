@@ -2,9 +2,10 @@ FIGURES = 'reports/figures/chem_data_py.pdf'
 
 rule all:
     input:
-        'reports/paper.pdf'
+        'reports/paper.pdf',
+        'reports/preprint.pdf'
 
-rule make_pdf:
+rule make_paper:
     input:
         'reports/paper.tex',
         'reports/iucr.bib',
@@ -18,6 +19,22 @@ rule make_pdf:
         bibtex paper.aux
         pdflatex paper.tex
         pdflatex paper.tex
+        """
+
+rule make_preprint:
+    input:
+        'reports/preprint.tex',
+        'reports/iucr.bib',
+        FIGURES
+    output:
+        'reports/preprint.pdf'
+    shell:
+        """
+        cd reports
+        pdflatex preprint.tex
+        bibtex preprint.aux
+        pdflatex preprint.tex
+        pdflatex preprint.tex
         """
 
 rule clean:

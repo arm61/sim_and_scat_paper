@@ -1,6 +1,8 @@
 .snakemake
-reports/paper.aux
-reports/paper.bbl
-reports/paper.blg
-reports/paper.log
-reports/paper.out
+reports/paper.*
+reports/preprint.aux
+reports/preprint.bbl
+reports/preprint.blg
+reports/preprint.log
+reports/preprint.out
+reports/preprintNotes.bib
