@@ -20,6 +20,13 @@ rule make_pdf:
         pdflatex paper.tex
         """
 
+rule clean:
+    shell:
+        """
+        rm reports/figures/*
+        rm reports/paper.pdf
+        """
+
 rule pdfclean:
     shell:
         "rm reports/paper.pdf"
