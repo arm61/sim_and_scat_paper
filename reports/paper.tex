@@ -111,44 +111,46 @@ Figure \ref{fig:growth} shows the growth in the percentage of small angle scatte
 It can be seen that there has been a linear growth in such publications, with more than \SI{20}{\percent} of all SAS publications mentioning molecular dynamics as of 2018.
 This alone is a clear indication of the importance simulation techniques are having on the field of scattering and diffraction.
 
-Usually users of small angle scattering and diffraction techniques have a background in experimental science, with little to no formalised training in computational modelling.
-This is particularly problematic, as it leads to some users treating molecular simulation as a black-box, using tools such as WAXSiS or SASSIE \cite{Chen2014,Knight2015,Perkins2016}.
-Use of molecular simulation without a solid understanding of the fundamentals can lead to the inclusion of severe systematic errors.
+Normally, the users of scattering and diffraction techniques have a background in experimental science, with little or no formalised training in computational modelling techniques.
+This may be problematic, as it can lead to the use of molecular simulation as a black-box, with little understanding or consideration for the underlying methodologies.
+The use of molecular simulation in this fashion can quickly lead to the inclusion of severe, systematic errors.
+This has lead to the development of tools, such as WAXSiS or SASSIE \cite{Chen2014,Knight2015,Perkins2016}, that present easy-to-use interfaces designed to reduce the risk of these errors.
 
-Recently, there has been a growth in courses that introduce the background of molecular simulation alongside the use of the packages mentioned above.
-For example, the annual ISIS Neutron Training Course now includes an ``Introduction to Molecular Dynamics for Neutron Scattering'' course, which details the fundamentals of classical molecular dynamics simulation, before detailing some previous applications in neutron science and allowing the student to gain a familiarity with the SASSIE software.
-However, courses such as the ISIS Neutron Training Course are limited both in numbers and location meaning not all users of molecular simulation based software packages are able to easy access them.
+In addition to the development of software packages, another method to further limit systematic errors, are lectures or courses presenting and introduction to molecular simulation for scattering and diffraction users.
+For example, the annual ISIS Neutron Training Course now included an ``Introduction to Molecular Dyanmics for Neutron Scattering'' module.
+This details the fundemental of classical molecular dynamics simulation, before presenting some previous applications of these methods in neutron science and allowing the students to gain a familiarity with the SASSIE package.
+While such courses and modules are an important aspect of training, they are limited both in numbers of students that may attend and location, meaning that not scattering and diffraction users may easily access them.
 
-The utility of learning options is also limited by availability, in order to reduce that need there has been a movement towards technology enhanced open educational resources (OER).
-The use of the Jupyter Notebook framework \cite{Kluyver2016} has facilitated this by allowing direct student interaction with the learning resources using, often but not always, the Python programming language.
+There has been a recent movement within the scientific and engineering communities towards technology-enchanced open educational resources (OERs).
+These are courses, lectures, or learning modules that are made free available online for use by anyone.
+This allows the permission for others to engage in the ``5R activities'': Retain, Reuse, Revise, Remix, and Redistribute \cite{opencontent2018}.
+The act of publishing an OER increases the reach of a particular resource as it allows others to pick it up, modify it, and use the modified version in their own teaching.
+The availability of the Jupyter Notebook framework \cite{Kluyver2016} has facilitated the availability of OERs by improving the ability for students to interact directly with the resource using, often but not always, the Python programming language \cite{Barba2017}.
 
-The work herein describes an online, open-source, interactive module to introduce members from the scattering and diffraction communities to molecular dynamics simulations.
-This course follows six lessons, covering classical methods and introducing molecular dynamics methods.
-Then the Python library pylj \cite{McCluskey2018} is used to introduce the interaction between molecular dynamics simulation and scattering/diffraction in the context on the Debye equation \cite{Debye1915}.
-We will discuss implementation and detail how the student, regardless of career position, can get the most from the module.
+Herein, we present an online, open-source, interactive module aimed to introduce members of the scattering and diffraction community to molecular dynamics simulation.
+This course follows six lessons, covering classical methods, introducing molecular dynamics, and showing how this method may interact with scattering in a multi-modal fashion.
+We leverage the open-source Python library pylj \cite{McCluskey2018} to give a visual, and programmatic representation of the interaction between these two techniques.
+In this paper, we will discuss the implementation of the module, and detail how the student (in this work \emph{the student} refers to any student of the module regardless of career position) may get the most from the module.
 
 \section{Assumed prior knowledge}
 
-The interaction between simulation and scattering course makes use of the Python programming language to give interactive examples for the mathematical and algorithmic content.
-Therefore some knowledge, or willingness to learn, Python is desired.
-However, we have aimed to write the course in such a fashion that in depth Python knowledge is not required.
-Some knowledge of undergraduate chemistry or physics is necessary to fully understand the nature of the classical interaction potentials.
-Furthermore, the level of mathematics required for an undergraduate science degree is assumed.
+The OER, entitled \emph{``The interaction between simulation and scattering''} makes use of the Python programming language, this allows for interactive examples of the mathematical and algorithm content to be included.
+A result of this is that, to be able to fully utilise the course, some knowledge, of willingness to learn, Python is required.
+However, we have attempted to develop the course in such a fashion that an in depth knowledge of Python is not required.
+It is anticipated that the users of this course would have some familiarity with undergraduate chemistry or physics, and the associated level of mathematics.
+This is particularly important when considering the nature, and chemical rationale, of the classical interaction potentials.
 
 \section{Module construction}
 
-The module is currently hosted online at \url{https://arm61.github.io/sim_and_scat}.
-A Jupyter Notebook based course building system developed at the University of Bath was used to allow the course to be written as a series of Jupyter Notebooks, which are then compiled into the webpages.
-This allowed Python code blocks to be built into the lessons to show algorithmic details in practice.
+The module is currently available online, at \url{https://arm61.github.io/sim_and_scat}.
+These webpages were written as a series of Jupyter Notebooks and compiled using the build-system developed within the University of Bath.
+The use of this system allows for Python code blocks to be easily build into the lessons to give algorihtmic details and facilitate interactivity.
+It is expected that the student would use the online material alongside a locally running Jupyter Notebook (the installation of which is detail in the module introduction).
+Interacting with the module in this fashion will allow the student to copy the Python code from the web interface, run it locally, and alter the code as they see fit.
 
-The expectation is that the user would use the online material alongside a Jupyter Notebook running locally (installation of this is detailed in the introduction to the course).
-This would allow the user to copy the Python code from the webpages, run it locally, and alter it as they see fit.
-
-The module is licensed under CC-BY-SA-4.0, and is therefore a contribution to the growing library of open educational resources.
-The open-source nature of this license means that particularly interested parties are able to easily use the module to enhance their own educational platform.
-Additionally, experts in the field may wish to contribute to it, or fork their own version that may grow independently.
-The source code is available at \url{https://github.com/arm61/sim_and_scat}.
-
+The module is provided under a CC-BY-SA-4.0 license, and builds on the growing library of open educational resources.
+The open-source nature of this license means that anyone may use the material to enhance their own educational platform, and experts in the field may contribute to improve the module.
+The source code for the module is available at \url{https://github.com/arm61/sim_and_scat}.
 
 \section{Module outline}
 
