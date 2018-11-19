@@ -2,17 +2,13 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-1810.07616-orange.svg)](https://arxiv.org/abs/1810.07616) [![DOI](https://zenodo.org/badge/144010644.svg)](https://zenodo.org/badge/latestdoi/144010644)
 
-[Andrew R. McCluskey](https://orcid.org/0000-0003-3381-5911)&ast;, [Adam R.Symington](https://orcid.org/0000-0001-6059-497X), [James Grant](https://orcid.org/0000-0003-1362-2055), [Benjamin J. Morgan](https://orcid.org/0000-0002-3056-8233)
-), [Stephen C. Parker](https://orcid.org/0000-0003-3804-0975), [Karen J. Edler](https://orcid.org/0000-0001-5822-0127)&ast;.
+[Andrew R. McCluskey](https://orcid.org/0000-0003-3381-5911)&ast;, [Adam R.Symington](https://orcid.org/0000-0001-6059-497X), [James Grant](https://orcid.org/0000-0003-1362-2055), [Benjamin J. Morgan](https://orcid.org/0000-0002-3056-8233), [Stephen C. Parker](https://orcid.org/0000-0003-3804-0975), [Karen J. Edler](https://orcid.org/0000-0001-5822-0127)&ast;.
 
 &ast;[a.r.mccluskey@bath.ac.uk](mailto:a.r.mccluskey@bath.ac.uk) & [k.edler@bath.ac.uk](mailto:k.edler@bath.ac.uk)
 
 This is the electronic supplementary information (ESI) associated with the publication "Introducing classical molecular dynamics simulation to users of scattering".
 This ESI provides full details of the analyses performed in the work and access to an automated analysis workflow, through this we aim to provide better access to analysis reproduciblility.
-The [Supplementary Information document](reports/si.pdf) can be found in the [reports](/reports) folder, alongside a preprint copy of the publication.
 For more information about reproducible workflows in Python, check out [Tania Allard's talk from Pycon2018](http://bitsandchips.me/Talks/PyCon.html#/title).
-
-## [Data]()
 
 ## Analysis
 
@@ -22,9 +18,9 @@ Requirements:
 
 - anaconda or miniconda python
 
-The supplied Snakemake file, will reproduce all of the analysis, plot the figures, and build a preprint version of the paper (`reports/paper.pdf`) when run. Be aware that the analyses within this work are non-trivial and take many hours to run so **use caution** before re-running.
+The supplied Snakemake file, will reproduce all of the analysis, plot the figures, and build a preprint version of the paper (`reports/paper.pdf`) when run.
 
-If you **still** want to re-run all of the analysis, please download the [experimental data](), place it in a directory named `data` before running the following commands:
+If you want to re-run the analysis, the following commands:
 
 ```
 conda create --name paper_env python
@@ -33,7 +29,7 @@ source activate paper_env
 
 conda install -c biopython snakemake
 
-pip install -r config/requirements.txt
+pip install -r requirements.txt
 
 snakemake clean # this will remove all of the output from previous runs
 
@@ -46,7 +42,7 @@ PDF versions of the figures, can be found in the `reports/figures` directory.
 
 ## Acknowledgements
 
-A. R. M. is grateful to the University of Bath and Diamond Light Source for co-funding a studentship (Studentship Number STU0149).
+A. R. M. is grateful to the University of Bath and Diamond Light Source for co-funding a studentship (Studentship No. STU0149).
 B. J. M. acknowledges support from the Royal Society (Grant No. UF130329).
 
 ## Project Organization
