@@ -106,46 +106,45 @@ The source code for the module is available at \url{https://github.com/arm61/sim
 
 \section{Module outline}
 
-The module follows a simple outline, with code blocks that gradually build up the students understanding of the concepts.
+The module follows a simple outline to introduce important aspects of molecular dynamics simulation.
+Code blocks are used to gradually build up students understanding of the various concepts.
 
 \subsection{Getting started}
 
-The first page, nominally Lesson 0, introduces the course and outlines the content.
-It also gives directions on how to install the necessary software, namely Anaconda Python, and the pylj package \cite{McCluskey2018}, and launch the Jupyter Notebook interface \cite{Kluyver2016}.
-It is important that this is introduced early in the module such that students can immediately be actively involves in the interactive experience of the lessons.
+The welcome page, nominally Lesson 0, introduces the course, outlines the content and give the student information about preparing their computer to run the necessary software, including Anaconda Python and the pylj package \cite{McCluskey2018}
+It is important for the student to have their computer ready with the necessary software before beginning the module, this ensure that they are able to interactive fully with the content of each lesson.
 
 \subsection{Classical methods}
 
-Once the students computer is able to run the necessary software, concepts of classical simulation methods are introduced.
-These include the nature of potential models and show some examples such as the Lennard-Jones and Buckingham potentials \cite{LennardJones1924,Buckingham1938}.
-The course gives a brief description of how a potential model is determined, including mention to the parameterisation from higher accuracy quantum mechanical calculations.
-The existence of off-the-shelf potential models is mentioned alongside a discussion of the problems associated with these as they also may require system specific optimisation.
-Finally, we mention mixing rules for off-the-shelf potential models, and again discuss possible problems that a user may encounter related to system specificity.
+Once the necessary software is install, concepts related broadly to classical simulation methods are introduced. 
+This includes the functional nature of potential modelling and gives some examples, such as the Lennard-Jones and Buckingham potential models \cite{LennardJones1924,Buckingham1938}.
+Potential model parameterisation is briefly covered, including the use of higher accuracy quantum mechanical calculations to do so. 
+The presence of off-the-shelf, general potential models, with the caveat that they may still require system speific optimisation, are discussed. 
+Finally, we mention the mixing, or combination rules, and again discuss possible problems that a user may encounter related to system specificity. 
 
 \subsection{Molecular dynamics}
 
-Once the basics of classical methods have been introduced, the student is presented with molecular dynamics.
-This is shown by gradually building up a one-dimension molecular dynamics simulation using the Velocity-Verlet algorithm \cite{Swope1982} and the Lennard-Jones potential model \cite{LennardJones1924}.
-This begins by detailing the requirement to find the forces on the particles, before introducing how the acceleration is determined for each particle.
-Finally, the different aspects of the determination of the particle positions and velocities using the Velocity-Verlet algorithm are outlined.
+Building on the previously introduced classical potential model methods, the student is presented with molecular dynamics. 
+This is shown by using different aspects for the method to gradually build up a one-dimensional molecular dynamics simulation using the NVE ensemble, the Velocity-Verlet algorithm, and the Lennard-Jones potential model \cite{Swope1982,LennardJones1924}.
+This is introduced in terms of Newton's laws of motion and the generalised equations of motion which should be familiar to most students. 
+Finally, different importance considerations for molecular dynamics simulation are described including ensembles, the potential cut-off, and the periodic boundary conditions. 
 
 \subsection{pylj and the interaction with scattering}
 
-The final aspect of the module makes use of the Python package pylj \cite{McCluskey2018}.
-This is a open-source package designed to introduce students to classical atomistic simulation.
-First, the student is given a working pylj molecular dynamics simulation to run on locally, then they are shown how to use the custom plot functionality of pylj to present information about the simulation.
-In the final lesson, the Debye equation is introduced and the students are shown how to implement it within pylj.
-Using pylj, the students may then observe the effect of temperature on both the structure of the argon particles, in addition to the scattering profile that is generated from the Debye equation.
-Finally, we mention the algorithms that may be used to improve the efficiency of the calculation of the scattering profile, such as the Fibonacci sequence or the Golden Vectors method \cite{Svergun1994, Watson2013}.
+The final aspect of the module is to utilise a molecular dynamics simulation to understand some scattering profile. 
+This is achieved using the open-source pylj package \cite{McCluskey2018}, which allows a two-dimensional simulation or argon particles, interacting through a Lennard-Jones potential, to be performed.
+The student is firstly shown an working pylj simulation and invited to interact with the simulation and the custom plotting functionality of pylj. 
+In the final lessons, a formulation of the Debye equation \cite{Debye1915} is given and the students is invited to observe the effect of simulation temperature on the resulting scattering profile. 
+There is a mention of other, faster, algorithms for the determination of the scattering profile, such as the Fibonacci sequence or Golden Vectors methods \cite{Svergun1994,Watson2013}. 
 
 \section{Future outlook}
 
-In future, we hope that the open-source nature of the module will allow interested parties to use and build upon it.
-Furthermore, we welcome student input to improve implementation and pedagogical aspects of the module.
-We hope to use this module within teaching at courses such as the ISIS Neutron Training Course and the Diamond SAS workshop, from which feedback may be obtained directly.
+In future, we hope that the nature of the material as an OER will promate interest from pther parties towards reuse, and remixing the material.
+Furthermore, we hope to implement this material within training at the ISIS Neutron and Muon Source as well as Diamond Light Source. 
+This will provide student feedback enabling the improvement of implementation, materials, and general pedagogy of the module. 
 
 \begin{acknowledgements}
-A. R. M. is grateful to the University of Bath and Diamond Light Source for co-funding a studentship (Studentship Number STU0149).
+A. R. M. is grateful to the University of Bath and Diamond Light Source for co-funding a studentship (Studentship No. STU0149).
 B. J. M. acknowledges support from the Royal Society (Grant No. UF130329).
 \end{acknowledgements}
 
