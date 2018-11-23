@@ -1,6 +1,6 @@
 # ESI for "Introducing classical molecular dynamics simulation to users of scattering"
 
-[![arXiv](https://img.shields.io/badge/arXiv-1810.07616-orange.svg)](https://arxiv.org/abs/1810.07616) [![DOI](https://zenodo.org/badge/144010644.svg)](https://zenodo.org/badge/latestdoi/144010644)
+<!--- [![arXiv](https://img.shields.io/badge/arXiv-1810.07616-orange.svg)](https://arxiv.org/abs/1810.07616) [![DOI](https://zenodo.org/badge/144010644.svg)](https://zenodo.org/badge/latestdoi/144010644) -->
 
 [Andrew R. McCluskey](https://orcid.org/0000-0003-3381-5911)&ast;, [Adam R.Symington](https://orcid.org/0000-0001-6059-497X), [James Grant](https://orcid.org/0000-0003-1362-2055), [Benjamin J. Morgan](https://orcid.org/0000-0002-3056-8233), [Stephen C. Parker](https://orcid.org/0000-0003-3804-0975), [Karen J. Edler](https://orcid.org/0000-0001-5822-0127)&ast;.
 
@@ -52,14 +52,7 @@ B. J. M. acknowledges support from the Royal Society (Grant No. UF130329).
     ├── LICENSE         # CC-BY-SA-4.0
     ├── README.md       # You are here
     ├── Snakefile       # Makefile to outline workflow
-    ├── bin             # Some python scripts
-    ├── output          # Files and data output by analysis scripts
-    │   ├── simulation
-    │   └── traditional
     ├── config          # requirements.txt file
-    ├── notebooks       # Notebooks for analysis
-    │   ├── simulation
-    │   └── traditional
+    ├── notebooks       # Notebook for plotting
     ├── reports         # Paper and ESI
-    │   └── figures
-    └── models          # mol_vol.py custom model for refnx
+        └── figures
