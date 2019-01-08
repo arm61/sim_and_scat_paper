@@ -1,5 +1,8 @@
 .snakemake
-reports/iucr*
+reports/iucr.bst
+reports/iucr.cls
+reports/iucr.layout
+reports/iucrit.bst
 reports/paper.*
 reports/preprint.aux
 reports/preprint.bbl

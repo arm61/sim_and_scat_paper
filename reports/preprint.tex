@@ -1,4 +1,4 @@
-\documentclass[amsmath,amssymb,twocolumn,superscriptaddress,aps,prl]{revtex4-1}
+\documentclass[amsmath,amssymb,twocolumn,superscriptaddress]{revtex4-1}
 
 \usepackage{graphicx}% Include figure files
 \usepackage{dcolumn}% Align table columns on decimal point
@@ -21,6 +21,10 @@ Bath, BA2 7AY, UK}
 \author{A.~R. Symington}
 \affiliation{Department of Chemistry, University of Bath, Claverton Down,
 Bath, BA2 7AY, UK}
+
+\author{J. F. T. B. Snow}
+\affiliation{Diamond Light Source, Harwell Campus, Didcot, OX11 0DE, UK}
+\affiliation{School of Chemistry, University of Bristol, Bristol, BS8 1TS, UK}
 
 \author{J. Grant}
 \affiliation{Computing Services, University of Bath, Claverton Down, Bath, BA2 7AY, UK}
@@ -116,32 +120,32 @@ It is important for the student to have their computer ready with the necessary 
 
 \subsection{Classical methods}
 
-Once the necessary software is install, concepts related broadly to classical simulation methods are introduced. 
+Once the necessary software is install, concepts related broadly to classical simulation methods are introduced.
 This includes the functional nature of potential modelling and gives some examples, such as the Lennard-Jones and Buckingham potential models \cite{LennardJones1924,Buckingham1938}.
-Potential model parameterisation is briefly covered, including the use of higher accuracy quantum mechanical calculations to do so. 
-The presence of off-the-shelf, general potential models, with the caveat that they may still require system speific optimisation, are discussed. 
-Finally, we mention the mixing, or combination rules, and again discuss possible problems that a user may encounter related to system specificity. 
+Potential model parameterisation is briefly covered, including the use of higher accuracy quantum mechanical calculations to do so.
+The presence of off-the-shelf, general potential models, with the caveat that they may still require system speific optimisation, are discussed.
+Finally, we mention the mixing, or combination rules, and again discuss possible problems that a user may encounter related to system specificity.
 
 \subsection{Molecular dynamics}
 
-Building on the previously introduced classical potential model methods, the student is presented with molecular dynamics. 
+Building on the previously introduced classical potential model methods, the student is presented with molecular dynamics.
 This is shown by using different aspects for the method to gradually build up a one-dimensional molecular dynamics simulation using the NVE ensemble, the Velocity-Verlet algorithm, and the Lennard-Jones potential model \cite{Swope1982,LennardJones1924}.
-This is introduced in terms of Newton's laws of motion and the generalised equations of motion which should be familiar to most students. 
-Finally, different importance considerations for molecular dynamics simulation are described including ensembles, the potential cut-off, and the periodic boundary conditions. 
+This is introduced in terms of Newton's laws of motion and the generalised equations of motion which should be familiar to most students.
+Finally, different importance considerations for molecular dynamics simulation are described including ensembles, the potential cut-off, and the periodic boundary conditions.
 
 \subsection{pylj and the interaction with scattering}
 
-The final aspect of the module is to utilise a molecular dynamics simulation to understand some scattering profile. 
+The final aspect of the module is to utilise a molecular dynamics simulation to understand some scattering profile.
 This is achieved using the open-source pylj package \cite{McCluskey2018}, which allows a two-dimensional simulation or argon particles, interacting through a Lennard-Jones potential, to be performed.
-The student is firstly shown an working pylj simulation and invited to interact with the simulation and the custom plotting functionality of pylj. 
-In the final lessons, a formulation of the Debye equation \cite{Debye1915} is given and the students is invited to observe the effect of simulation temperature on the resulting scattering profile. 
-There is a mention of other, faster, algorithms for the determination of the scattering profile, such as the Fibonacci sequence or Golden Vectors methods \cite{Svergun1994,Watson2013}. 
+The student is firstly shown an working pylj simulation and invited to interact with the simulation and the custom plotting functionality of pylj.
+In the final lessons, a formulation of the Debye equation \cite{Debye1915} is given and the students is invited to observe the effect of simulation temperature on the resulting scattering profile.
+There is a mention of other, faster, algorithms for the determination of the scattering profile, such as the Fibonacci sequence or Golden Vectors methods \cite{Svergun1994,Watson2013}.
 
 \section{Future outlook}
 
 In future, we hope that the nature of the material as an OER will promate interest from pther parties towards reuse, and remixing the material.
-Furthermore, we hope to implement this material within training at the ISIS Neutron and Muon Source as well as Diamond Light Source. 
-This will provide student feedback enabling the improvement of implementation, materials, and general pedagogy of the module. 
+Furthermore, we hope to implement this material within training at the ISIS Neutron and Muon Source as well as Diamond Light Source.
+This will provide student feedback enabling the improvement of implementation, materials, and general pedagogy of the module.
 
 \begin{acknowledgements}
 A. R. M. is grateful to the University of Bath and Diamond Light Source for co-funding a studentship (Studentship No. STU0149).
