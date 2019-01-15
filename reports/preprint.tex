@@ -55,7 +55,7 @@ Furthermore, we cover some of the methods that can be used to enable simulation 
 
 \section{Introduction}
 
-\noindent The use of molecular dynamics simulations to aid in the analysis of experimental data, particularly from small angle scattering (SAS) and diffraction, has grown significantly over the past ten years \cite{Pan2012,Boldon2015,Hub2018,Ivanovic2018,East2016,Wall2014,Wall2018,Satoh2015}.
+\noindent The use of molecular dynamics simulations to aid in the analysis of experimental data, particularly from small angle scattering (SAS) and diffraction, has grown significantly over the past ten years \cite{pan_molecular_2012,boldon_review_2015,hub_interpreting_2018,ivanovic_temperature-dependent_2018,east_structural_2016,wall_conformational_2014,wall_internal_2018,satoh_multiple_2015}.
 Figure \ref{fig:growth} shows the growth in the percentage of SAS publications that mention molecular dynamics.
 It can be seen that there has been a linear growth in such publications, with more than \SI{20}{\percent} of all SAS publications mentioning molecular dynamics as of 2018.
 This alone is a clear indication of the importance that simulation techniques are having on the field of scattering and diffraction.
@@ -63,11 +63,11 @@ This alone is a clear indication of the importance that simulation techniques ar
 Normally, the users of scattering and diffraction techniques have a background in experimental science, with little or no formalised training in computational modelling techniques.
 This may be problematic, as it can lead to the use of molecular simulation as a black-box, with little understanding or consideration for the underlying methodologies.
 The use of molecular simulations in this fashion can quickly lead to the inclusion of severe, systematic errors.
-This has lead to the development of tools, such as WAXSiS or SASSIE \cite{Chen2014,Knight2015,Perkins2016}, that present easy-to-use interfaces designed to reduce the risk of these errors.
+This has lead to the development of tools, such as WAXSiS or SASSIE \cite{chen_validating_2014,knight_waxsis:_2015,perkins_atomistic_2016}, that present easy-to-use interfaces designed to reduce the risk of these errors.
 
 In addition to the development of software packages another method to further limit systematic errors consists of lectures or workshops presenting and introduction to molecular simulation for scattering and diffraction users.
 For example, the annual ISIS Neutron Training Course now includes a module entitled ``An Introduction to Molecular Dynamics for Neutron Scattering''.
-This details the fundamentals of classical molecular dynamics simulation, before presenting applications of these methods in neutron science in turn allowing students an opportunity to gain familiarity with the SASSIE software package \cite{Perkins2016}.
+This details the fundamentals of classical molecular dynamics simulation, before presenting applications of these methods in neutron science in turn allowing students an opportunity to gain familiarity with the SASSIE software package \cite{perkins_atomistic_2016}.
 While such lectures and workshops comprise an important aspect of training, they are limited in terms of the numbers of students that may attend and the course's location.
 Ultimately this means that not all scattering and diffraction users may easily access such resources.
 
@@ -81,13 +81,13 @@ Ultimately this means that not all scattering and diffraction users may easily a
 
 There has been a recent movement within the scientific and engineering communities towards technology-enhanced open educational resources (OERs).
 These are courses, lectures, or learning modules that are made freely available online for use by anyone.
-This allows the permission for others to engage in the ``5R activities'': Retain, Reuse, Revise, Remix, and Redistribute \cite{opencontent2018}.
+This allows the permission for others to engage in the ``5R activities'': Retain, Reuse, Revise, Remix, and Redistribute \cite{wiley_open_2018}.
 The act of publishing an OER increases the reach of a particular resource as it allows others to pick it up, modify it, and use the modified version in their own teaching.
-The availability of the Jupyter Notebook framework \cite{Kluyver2016} has facilitated the availability of OERs by improving the ability for students to interact directly with the resource often, but not always, using the Python programming language \cite{Barba2017}.
+The availability of the Jupyter Notebook framework \cite{kluyver_jupyter_2016} has facilitated the availability of OERs by improving the ability for students to interact directly with the resource often, but not always, using the Python programming language \cite{barba_cybertraining:_2017}.
 
 Herein, we present an online, open-source, interactive module aimed to introduce members of the scattering and diffraction community to molecular dynamics simulations.
 This course comprises of six lessons, covering classical methods, introducing molecular dynamics, and showing how this method may interact with scattering in a multi-modal fashion.
-We leverage the open-source Python library pylj \cite{McCluskey2018} to give a visual and programmatic representation of the interactions between these two techniques.
+We leverage the open-source Python library pylj \cite{mccluskey_pylj:_2018} to give a visual and programmatic representation of the interactions between these two techniques.
 In this paper we will discuss the implementation of the module and detail how the student may get the most from the module (in this work \emph{the student} refers to anyone undertaking the course, regardless of career position).
 
 \section{Assumed prior knowledge}
@@ -101,12 +101,12 @@ This is particularly important when considering the nature, and chemical rationa
 \section{Module construction}
 
 The module is currently available online, at \url{https://arm61.github.io/sim_and_scat}.
-These webpages were written as a series of Jupyter Notebooks and compiled using the build-system developed within the University of Bath \cite{build_system}.
+These webpages were written as a series of Jupyter Notebooks and compiled using the build-system developed within the University of Bath \cite{betteridge_jupyter_tutorial_2019}.
 The use of this system allows for Python code blocks to be easily built into lessons providing algorihtmic details whilst also facilitating interactivity.
 It is expected that the student would use the online material alongside a locally running Jupyter Notebook (the installation of which is detailed in the module introduction).
 Interacting with the module in this fashion will allow the student to copy the Python code from the web interface, run it locally, and alter the code as they see fit.
 
-The module is provided under a CC-BY-SA-4.0 license \cite{CCBYSA4}, and builds on the growing library of open educational resources.
+The module is provided under a CC-BY-SA-4.0 license \cite{noauthor_creative_2019}, and builds on the growing library of open educational resources.
 The open-source nature of this license means that anyone may use the material to enhance their own educational platform and experts in the field may contribute to improve the module.
 The source code for the module is available at \url{https://github.com/arm61/sim_and_scat}.
 
@@ -117,14 +117,14 @@ Code blocks are used to gradually build up the student's understanding of the va
 
 \subsection{Getting started}
 
-The welcome page, nominally Lesson 0, introduces the course, outlines the content and gives the student information about preparing their computer in order to run the necessary software, including Anaconda Python and the pylj package \cite{McCluskey2018}
+The welcome page, nominally Lesson 0, introduces the course, outlines the content and gives the student information about preparing their computer in order to run the necessary software, including Anaconda Python and the pylj package \cite{mccluskey_pylj:_2018}
 It is important for the student to have their computer ready with the necessary software before beginning the module.
 This ensures that they are able to interact fully with the content of each lesson.
 
 \subsection{Classical methods}
 
 Once the necessary software is installed, concepts relating broadly to classical simulation methods are introduced.
-This includes the functional nature of potential modelling and gives some examples, such as the Lennard-Jones and Buckingham potential models \cite{LennardJones1924,Buckingham1938}.
+This includes the functional nature of potential modelling and gives some examples, such as the Lennard-Jones and Buckingham potential models \cite{lennard-jones_determination_1924,buckingham_classical_1938}.
 Potential model parameterisation is briefly covered including the use of higher accuracy quantum mechanical calculations to do so.
 The presence of off-the-shelf, general potential models are discussed; with particular attention paid to the caveat that they may still require system specific optimisations.
 Finally, we mention mixing, or combination, rules; again discussing the possible problems that a user may encounter related to system specificity.
@@ -132,17 +132,17 @@ Finally, we mention mixing, or combination, rules; again discussing the possible
 \subsection{Molecular dynamics}
 
 Building on the classical potential model methods the student is then presented with molecular dynamics.
-This is shown by using different aspects for the method to gradually build up a one-dimensional molecular dynamics simulation using NVE (Number, Volume and Energy) ensembles, the Velocity-Verlet algorithm and the Lennard-Jones potential model \cite{Swope1982,LennardJones1924}.
+This is shown by using different aspects for the method to gradually build up a one-dimensional molecular dynamics simulation using NVE (Number, Volume and Energy) ensembles, the Velocity-Verlet algorithm and the Lennard-Jones potential model \cite{swope_computer_1982,lennard-jones_determination_1924}.
 This is introduced in terms of Newton's laws of motion and the generalised equations of motion, which should be familiar to most students.
 Finally, different importance considerations for molecular dynamics simulations are described including ensembles, the potential cut-off, and periodic boundary conditions.
 
 \subsection{pylj and the interaction with scattering}
 
 The final aspect of the module is to utilise a molecular dynamics simulation to understand some scattering profiles.
-This is achieved using the open-source pylj package \cite{McCluskey2018}, which allows for a two-dimensional simulation or argon particles, interacting through a Lennard-Jones potential, to be performed.
+This is achieved using the open-source pylj package \cite{mccluskey_pylj:_2018}, which allows for a two-dimensional simulation or argon particles, interacting through a Lennard-Jones potential, to be performed.
 The student is firstly shown a working pylj simulation and invited to interact with the simulation and the custom plotting functionality of pylj.
-In the final lessons, a formulation of the Debye equation \cite{Debye1915} is given and the student is invited to observe the effect of simulation temperature on the resulting scattering profile.
-There is mention of other, faster, algorithms for the determination of scattering profiles, such as the Fibonacci sequence or Golden Vectors methods \cite{Svergun1994,Watson2013}.
+In the final lessons, a formulation of the Debye equation \cite{debye_zerstreuung_1915} is given and the student is invited to observe the effect of simulation temperature on the resulting scattering profile.
+There is mention of other, faster, algorithms for the determination of scattering profiles, such as the Fibonacci sequence or Golden Vectors methods \cite{svergun_solution_1994,watson_rapid_2013}.
 
 \section{Future outlook}
 
@@ -155,7 +155,7 @@ A. R. M. is grateful to the University of Bath and Diamond Light Source for co-f
 B. J. M. acknowledges support from the Royal Society (Grant No. UF130329).
 \end{acknowledgements}
 
-\bibliography{iucr.bib}
+\bibliography{bib.bib}
 
 
 \end{document}                    % DO NOT DELETE THIS LINE
