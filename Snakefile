@@ -7,7 +7,7 @@ rule all:
 rule make_preprint:
     input:
         'reports/preprint.tex',
-        'reports/iucr.bib',
+        'reports/bib.bib',
         FIGURES
     output:
         'reports/preprint.pdf'

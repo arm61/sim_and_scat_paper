@@ -63,7 +63,7 @@ This alone is a clear indication of the importance that simulation techniques ar
 Normally, the users of scattering and diffraction techniques have a background in experimental science, with little or no formalised training in computational modelling techniques.
 This may be problematic, as it can lead to the use of molecular simulation as a black-box, with little understanding or consideration for the underlying methodologies.
 The use of molecular simulations in this fashion can quickly lead to the inclusion of severe, systematic errors.
-This has lead to the development of tools, such as WAXSiS or SASSIE \cite{chen_validating_2014,knight_waxsis:_2015,perkins_atomistic_2016}, that present easy-to-use interfaces designed to reduce the risk of these errors.
+This has lead to the development of tools, such as WAXSiS or SASSIE \cite{chen_validating_2014,knight_waxsis_2015,perkins_atomistic_2016}, that present easy-to-use interfaces designed to reduce the risk of these errors.
 
 In addition to the development of software packages another method to further limit systematic errors consists of lectures or workshops presenting and introduction to molecular simulation for scattering and diffraction users.
 For example, the annual ISIS Neutron Training Course now includes a module entitled ``An Introduction to Molecular Dynamics for Neutron Scattering''.
@@ -83,11 +83,11 @@ There has been a recent movement within the scientific and engineering communiti
 These are courses, lectures, or learning modules that are made freely available online for use by anyone.
 This allows the permission for others to engage in the ``5R activities'': Retain, Reuse, Revise, Remix, and Redistribute \cite{wiley_open_2018}.
 The act of publishing an OER increases the reach of a particular resource as it allows others to pick it up, modify it, and use the modified version in their own teaching.
-The availability of the Jupyter Notebook framework \cite{kluyver_jupyter_2016} has facilitated the availability of OERs by improving the ability for students to interact directly with the resource often, but not always, using the Python programming language \cite{barba_cybertraining:_2017}.
+The availability of the Jupyter Notebook framework \cite{kluyver_jupyter_2016} has facilitated the availability of OERs by improving the ability for students to interact directly with the resource often, but not always, using the Python programming language \cite{barba_cybertraining_2017}.
 
 Herein, we present an online, open-source, interactive module aimed to introduce members of the scattering and diffraction community to molecular dynamics simulations.
 This course comprises of six lessons, covering classical methods, introducing molecular dynamics, and showing how this method may interact with scattering in a multi-modal fashion.
-We leverage the open-source Python library pylj \cite{mccluskey_pylj:_2018} to give a visual and programmatic representation of the interactions between these two techniques.
+We leverage the open-source Python library pylj \cite{mccluskey_pylj_2018} to give a visual and programmatic representation of the interactions between these two techniques.
 In this paper we will discuss the implementation of the module and detail how the student may get the most from the module (in this work \emph{the student} refers to anyone undertaking the course, regardless of career position).
 
 \section{Assumed prior knowledge}
@@ -117,7 +117,7 @@ Code blocks are used to gradually build up the student's understanding of the va
 
 \subsection{Getting started}
 
-The welcome page, nominally Lesson 0, introduces the course, outlines the content and gives the student information about preparing their computer in order to run the necessary software, including Anaconda Python and the pylj package \cite{mccluskey_pylj:_2018}
+The welcome page, nominally Lesson 0, introduces the course, outlines the content and gives the student information about preparing their computer in order to run the necessary software, including Anaconda Python and the pylj package \cite{mccluskey_pylj_2018}
 It is important for the student to have their computer ready with the necessary software before beginning the module.
 This ensures that they are able to interact fully with the content of each lesson.
 
@@ -139,7 +139,7 @@ Finally, different importance considerations for molecular dynamics simulations 
 \subsection{pylj and the interaction with scattering}
 
 The final aspect of the module is to utilise a molecular dynamics simulation to understand some scattering profiles.
-This is achieved using the open-source pylj package \cite{mccluskey_pylj:_2018}, which allows for a two-dimensional simulation or argon particles, interacting through a Lennard-Jones potential, to be performed.
+This is achieved using the open-source pylj package \cite{mccluskey_pylj_2018}, which allows for a two-dimensional simulation or argon particles, interacting through a Lennard-Jones potential, to be performed.
 The student is firstly shown a working pylj simulation and invited to interact with the simulation and the custom plotting functionality of pylj.
 In the final lessons, a formulation of the Debye equation \cite{debye_zerstreuung_1915} is given and the student is invited to observe the effect of simulation temperature on the resulting scattering profile.
 There is mention of other, faster, algorithms for the determination of scattering profiles, such as the Fibonacci sequence or Golden Vectors methods \cite{svergun_solution_1994,watson_rapid_2013}.
