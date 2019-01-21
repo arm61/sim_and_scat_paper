@@ -80,50 +80,49 @@ Ultimately this means that not all scattering and diffraction users may easily a
 %
 
 There has been a recent movement within the scientific and engineering communities towards technology-enhanced open educational resources (OERs).
-These are courses, lectures, or learning modules that are made freely available online for use by anyone.
+These are courses, lectures, or learning resources that are made freely available online for use by anyone.
 This allows the permission for others to engage in the ``5R activities'': Retain, Reuse, Revise, Remix, and Redistribute \cite{wiley_open_2018}.
 The act of publishing an OER increases the reach of a particular resource as it allows others to pick it up, modify it, and use the modified version in their own teaching.
 The availability of the Jupyter Notebook framework \cite{kluyver_jupyter_2016} has facilitated the availability of OERs by improving the ability for students to interact directly with the resource often, but not always, using the Python programming language \cite{barba_cybertraining_2017}.
 
-Herein, we present an online, open-source, interactive module aimed to introduce members of the scattering and diffraction community to molecular dynamics simulations.
-This course comprises of six lessons, covering classical methods, introducing molecular dynamics, and showing how this method may interact with scattering in a multi-modal fashion.
+Herein, we present an online, open-source, interactive learning resource aimed to introduce members of the scattering and diffraction community to molecular dynamics simulations.
+This open educational resource comprises of six lessons, covering classical methods, introducing molecular dynamics, and showing how this method may interact with scattering in a multi-modal fashion.
 We leverage the open-source Python library pylj \cite{mccluskey_pylj_2018} to give a visual and programmatic representation of the interactions between these two techniques.
-In this paper we will discuss the implementation of the module and detail how the student may get the most from the module (in this work \emph{the student} refers to anyone undertaking the course, regardless of career position).
+In this paper we will discuss the implementation of the resource and detail how the student may get the most from the resource (in this work \emph{the student} refers to anyone working through the OER, regardless of career position).
 
 \section{Assumed prior knowledge}
 
 The OER, entitled \emph{``The interaction between simulation and scattering''} makes use of the Python programming language, this allows for interactive examples of the mathematical and algorithm content to be included.
-A result of this is that to be able to fully utilise the course some knowledge of, or willingness to learn, Python is required.
-However, we have attempted to develop the course in such a fashion that an in depth knowledge of Python is not required.
-It is anticipated that the users of this course would have some familiarity with undergraduate level chemistry or physics, alongside a commensurate understanding of mathematics.
+A result of this is that to be able to fully utilise the resource some knowledge of, or willingness to learn, Python is required.
+However, we have attempted to develop the resource in such a fashion that an in depth knowledge of Python is not required.
+It is anticipated that the users of this resource would have some familiarity with undergraduate level chemistry or physics, alongside a commensurate understanding of mathematics.
 This is particularly important when considering the nature, and chemical rationale, of classical interaction potentials.
 
-\section{Module construction}
+\section{Resource construction}
 
-The module is currently available online, at \url{https://arm61.github.io/sim_and_scat}.
-These webpages were written as a series of Jupyter Notebooks and compiled using the build-system developed within the University of Bath \cite{betteridge_jupyter_tutorial_2019}.
-The use of this system allows for Python code blocks to be easily built into lessons providing algorihtmic details whilst also facilitating interactivity.
-It is expected that the student would use the online material alongside a locally running Jupyter Notebook (the installation of which is detailed in the module introduction).
-Interacting with the module in this fashion will allow the student to copy the Python code from the web interface, run it locally, and alter the code as they see fit.
+The resource is currently available online, at \url{http://pythoninchemistry.org/sim_and_scat}.
+These webpages were written as a series of Jupyter Notebooks and Markdown files, which were then compiled using the jupyter-book functionality \cite{lau_jupyter/jupyter-book_2019}.
+The use of this system allows for Python code blocks to be included alongside the textual content providing algorihtmic details whilst also facilitating interactivity, though both Thebelab and BinderHub integrations \cite{ragan-kelley_minrk/thebelab_2019,ragan-kelley_jupyterhub/binderhub_2019,jupyter_binder_2018}.
+Interacting with the resource in this fashion will aloow the student to either run the Python code directly in the resource interface (Thebelab), or easily launch a MyBinder window to more intensive visualisations (such as pylj).
 
-The module is provided under a CC-BY-SA-4.0 license \cite{noauthor_creative_2019}, and builds on the growing library of open educational resources.
-The open-source nature of this license means that anyone may use the material to enhance their own educational platform and experts in the field may contribute to improve the module.
-The source code for the module is available at \url{https://github.com/arm61/sim_and_scat}.
+The resource is provided under a CC-BY-SA-4.0 license \cite{noauthor_creative_2019}, and builds on the growing library of open educational resources.
+The open-source nature of this license means that anyone may use the material to enhance their own educational platform and experts in the field may contribute to improve the resource.
+The source code for the resource is available at \url{https://github.com/pythoninchemistry/sim_and_scat}.
 
-\section{Module outline}
+\section{Resource outline}
 
-The module follows a simple outline to introduce important aspects of molecular dynamics simulations.
+The resource follows a simple outline to introduce important aspects of molecular dynamics simulations.
 Code blocks are used to gradually build up the student's understanding of the various concepts.
 
-\subsection{Getting started}
+\subsection{Home}
 
-The welcome page, nominally Lesson 0, introduces the course, outlines the content and gives the student information about preparing their computer in order to run the necessary software, including Anaconda Python and the pylj package \cite{mccluskey_pylj_2018}
-It is important for the student to have their computer ready with the necessary software before beginning the module.
-This ensures that they are able to interact fully with the content of each lesson.
+The welcome page, introduces the resource and gives the student information about how the resource may be used, including details of Thebelab and BinderHub integration.
+Furthermore, this page gives information about the use and sharing of the content of the resource including details of the license.
+This page also includes an authors and contributors list.
 
 \subsection{Classical methods}
 
-Once the necessary software is installed, concepts relating broadly to classical simulation methods are introduced.
+Following the introduction, concepts relating broadly to classical simulation methods are introduced.
 This includes the functional nature of potential modelling and gives some examples, such as the Lennard-Jones and Buckingham potential models \cite{lennard-jones_determination_1924,buckingham_classical_1938}.
 Potential model parameterisation is briefly covered including the use of higher accuracy quantum mechanical calculations to do so.
 The presence of off-the-shelf, general potential models are discussed; with particular attention paid to the caveat that they may still require system specific optimisations.
@@ -138,7 +137,7 @@ Finally, different importance considerations for molecular dynamics simulations 
 
 \subsection{pylj and the interaction with scattering}
 
-The final aspect of the module is to utilise a molecular dynamics simulation to understand some scattering profiles.
+The final aspect of the resource is to utilise a molecular dynamics simulation to understand some scattering profiles.
 This is achieved using the open-source pylj package \cite{mccluskey_pylj_2018}, which allows for a two-dimensional simulation or argon particles, interacting through a Lennard-Jones potential, to be performed.
 The student is firstly shown a working pylj simulation and invited to interact with the simulation and the custom plotting functionality of pylj.
 In the final lessons, a formulation of the Debye equation \cite{debye_zerstreuung_1915} is given and the student is invited to observe the effect of simulation temperature on the resulting scattering profile.
@@ -148,7 +147,7 @@ There is mention of other, faster, algorithms for the determination of scatterin
 
 In future, we hope that the nature of the material, as an OER, will promote interest from other parties towards reuse, and remixing the material.
 Furthermore, we hope to implement this material within training at the ISIS Neutron and Muon Source as well as Diamond Light Source.
-Finally, it is hoped, \textit{via} student and community feedback, that the improvement of implementation, materials, and general pedagogy of the module can be achieved, driving up the quality and depth of molecular dynamics analyses performed on results obtained from scattering and diffraction measurements.
+Finally, it is hoped, \textit{via} student and community feedback, that the improvement of implementation, materials, and general pedagogy of the resource can be achieved, driving up the quality and depth of molecular dynamics analyses performed on results obtained from scattering and diffraction measurements.
 
 \begin{acknowledgements}
 A. R. M. is grateful to the University of Bath and Diamond Light Source for co-funding a studentship (Studentship No. STU0149).
