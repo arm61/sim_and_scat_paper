@@ -10,4 +10,10 @@ reports/preprint.blg
 reports/preprint.log
 reports/preprint.out
 reports/preprintNotes.bib
+cover_letter/cover_letter.aux
+cover_letter/cover_letter.bbl
+cover_letter/cover_letter.blg
+cover_letter/cover_letter.log
+cover_letter/cover_letter.out
+cover_letter/cover_letterNotes.bib
 **/.DS_Store
