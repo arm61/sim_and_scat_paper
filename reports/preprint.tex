@@ -65,35 +65,35 @@ Figure \ref{fig:growth} shows the percentage of small-angle scattering publicati
 Users of scattering and diffraction techniques often have backgrounds in experimental science, with little or no formal training in the theory or practice of computational modelling.
 This can lead to molecular dynamics simulations being used as a ``black box'', with little understanding of the underlying methodologies, or consideration of possible sources of erroneous results.
 The use of molecular simulations without at least some understanding of the techniques can lead to the unintended inclusion of severe, systematic errors.
-The challenge of enabling researchers to use molecular dynamics simulation in their analysis of scattering data, while reducing this risk of modelling errors, has lead to the development of software tools, such as WAXSiS and SASSIE,\cite{chen_validating_2014,knight_waxsis_2015,perkins_atomistic_2016}, that present easy-to-use interfaces [INTERFACES FOR WHAT?].
+The challenge of enabling researchers to use molecular dynamics simulation in their analysis of scattering data, while reducing this risk of modelling errors, has lead to the development of software tools, such as WAXSiS and SASSIE \cite{chen_validating_2014,knight_waxsis_2015,perkins_atomistic_2016}, that present easy-to-use interfaces [INTERFACES FOR WHAT?].
 
 A complementary strategy to help avoid researchers inadvertently using erroneous simulation results is targetted educational resources and activities, such as lectures or workshops that introduce molecular simulation to audiences of scattering and diffraction users.
 One example is the annual ISIS Neutron Training Course, which includes a module entitled ``An Introduction to Molecular Dynamics for Neutron Scattering''.[CITATION?]
-This covers the fundamentals of classical molecular dynamics simulation, before presenting applications of these methods in neutron science, and allowing students to gain practical experience with the SASSIE software package \cite{perkins_atomistic_2016}.
-Lectures and workshops are certainly an important training approach, but often can be inconvenient or impractical for all interested students to attend, limiting their accessiblity.
+This covers the fundamentals of classical molecular dynamics simulation, presents applications of these methods in neutron science, and allows students to gain practical experience with the SASSIE software package \cite{perkins_atomistic_2016}.
 
 %
 \begin{figure}
 \label{fig:growth}
 \includegraphics[width=0.48\textwidth]{figures/chem_data_py.pdf}
-\caption{The annual percentage of publications that mention ``small angle scattering'' that also mention ``molecular dynamics'', determined from the numbers of matching Google Scholar results. [Personal quibbles: the colour is unnecessary here / Squares are uglier than filled circles]}
+\caption{The annual percentage of publications that mention ``small angle scattering'' that also mention ``molecular dynamics'', determined from the numbers of matching Google Scholar results. [Personal quibbles: the colour is unnecessary here / Squares are uglier than filled circles. Feel free to change this back though. Can the font be fixed / improved?]}
 \end{figure}
 %
 
-There has been a recent movement within the scientific and engineering communities towards technology-enhanced open educational resources (OERs).
-These are courses, lectures, or learning resources that are made freely available online for use by anyone.
-This allows the permission for others to engage in the ``5R activities'': Retain, Reuse, Revise, Remix, and Redistribute \cite{wiley_open_2018}.
-The act of publishing an OER increases the reach of a particular resource as it allows others to pick it up, modify it, and use the modified version in their own teaching.
-The availability of the Jupyter Notebook framework \cite{kluyver_jupyter_2016} has facilitated the availability of OERs by improving the ability for students to interact directly with the resource often, but not always, using the Python programming language \cite{barba_cybertraining_2017}.
+While lectures and workshops are a valuable approach to education and training, participation can be limited due to difficulties attending in person (due to location or cost) or physical limits on student numbers.
+An alternative educational medium gaining popularity within scientific and engineering communities is technology-enhanced open educational resources (OERs).
+These are courses, lectures, or learning resources published online that are freely available for use by anyone. In addition to their broad accessibility, these resources adopt permissive ``open'' copyright licences that permit their use in the ``5R activities'': retain, reuse, revise, remix, and redistribute \cite{wiley_open_2018}.
+The act of publishing a resouce as an OER increases its reach and cumulative impact, because others may take it for immediate use in their own teaching, or freely modify the material to suit their needs.
+The Jupyter Notebook framework \cite{kluyver_jupyter_2016} has become a popular platform for OERs that teach computational skills, because it allows authors to include instructional text, images, and other media, alongside executable code examples, in an example of ``literate programming'' \cite{Knuth_CompJ1984}. 
+This format encourages students to directly interact with the code by editing and rerunning this within the source document \cite{barba_cybertraining_2017}.
 
-Herein, we present an online, open-source, interactive learning resource aimed to introduce members of the scattering and diffraction community to molecular dynamics simulations.
-This open educational resource comprises of six lessons, covering classical methods, introducing molecular dynamics, and showing how this method may interact with scattering in a multi-modal fashion.
-We leverage the open-source Python library pylj \cite{mccluskey_pylj_2018} to give a visual and programmatic representation of the interactions between these two techniques.
-In this paper we will discuss the implementation of the resource and detail how the student may get the most from the resource (in this work \emph{the student} refers to anyone working through the OER, regardless of career position).
+In this article, we present an online, open-source, interactive learning resource aimed to introduce members of the scattering and diffraction community to molecular dynamics simulations.
+This open educational resource is comprised of six lessons that introduce classical molecular dynamics methods, and show how these can be used in the context of scattering in a multi-modal fashion [What does multi-model mean in this context?].
+To provide simple, but computationally ``real'' examples of simulations, we use the open-source Python library pylj \cite{mccluskey_pylj_2018} to demonstrate visually and programmatically the conceptual relationships between these two techniques.
+Here, we discuss the implementation of the resource [what do you mean here by "implementation"?] and describe how a student may get the most from the resource (in this work \emph{the student} refers to anyone working through the OER, regardless of career position [should this be included where you first mention students? Also, I'm a fan of footnotes for this kind of aside]).
 
 \section{Assumed prior knowledge}
 
-The OER, entitled \emph{``The interaction between simulation and scattering''} makes use of the Python programming language, this allows for interactive examples of the mathematical and algorithm content to be included.
+The OER, entitled \emph{``The interaction between simulation and scattering''} makes use of the Python programming language, which allows interactive examples of the mathematical and algorithm content to be included.
 A result of this is that to be able to fully utilise the resource some knowledge of, or willingness to learn, Python is required.
 However, we have attempted to develop the resource in such a fashion that an in depth knowledge of Python is not required.
 It is anticipated that the users of this resource would have some familiarity with undergraduate level chemistry or physics, alongside a commensurate understanding of mathematics.
