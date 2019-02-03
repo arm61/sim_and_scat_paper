@@ -12,7 +12,8 @@
 \title{An Introduction to Classical Molecular Dynamics Simulation for Experimental Scattering Users}
 
 \author{A.~R. McCluskey}
-\email{a.r.mccluskey@bath.ac.uk/andrew.mccluskey@diamond.ac.uk}
+\email{a.r.mccluskey@bath.ac.uk}
+\email{andrew.mccluskey@diamond.ac.uk}
 \affiliation{Department of Chemistry, University of Bath, Claverton Down,
 Bath, BA2 7AY, UK}
 \affiliation{Diamond Light Source, Harwell Campus, Didcot, OX11 0DE, UK}
@@ -48,28 +49,26 @@ Bath, BA2 7AY, UK}
 
 \begin{abstract}
 \noindent Classical molecular dynamics simulations are a common component of multi-modal analyses from scattering measurements, such as small-angle scattering and diffraction.
-Users of these techniques often have no formal training in the theory and practice of molecular dynamics simulation, leading to the possibility of these being treated as a ``black box'' analysis technique.
-This work discusses an open educational resource designed to introduce classical molecular dynamics to users of scattering methods.
-This resource comes in the form of a series of interactive web pages, which can be run from any device with internet connectivity.
-We present a general introduction to topics including classical simulation, potential model parameterisation and molecular dynamics simulation.
-We then discuss typical sources of error in classical molecular dynamics simulations, before considering some of the approaches to using simulations in the analysis of scattering data.
+Users of these experimental techniques often have no formal training in the theory and practice of molecular dynamics simulation, leading to the possibility of these simulations being treated as a ``black box'' analysis technique.
+In this article we describe an open educational resource (OER) designed to introduce classical molecular dynamics to users of scattering methods.
+This resource is available as a series of interactive web pages, which can be easily accessed by students, and as a open source software repository, which can be copied, modified, and redistributed by educators.
+The topic covered in this OER include classical atomistic modelling, parameterising interatomic potentials, molecular dynamics simulations, typical sources of error, and some of the approaches to using simulations in the analysis of scattering data.
 \end{abstract}
 
 \maketitle                        % DO NOT DELETE THIS LINE
 
 \section{Introduction}
 
-\noindent The use of molecular dynamics simulations to help analyse experimental data, particularly from small-angle scattering and diffraction, has grown significantly over the past ten years \cite{pan_molecular_2012,boldon_review_2015,hub_interpreting_2018,ivanovic_temperature-dependent_2018,east_structural_2016,wall_conformational_2014,wall_internal_2018,satoh_multiple_2015}.
-Figure \ref{fig:growth} shows the percentage of small-angle scattering publications that mention molecular dynamics in recent years, reaching more than \SI{20}{\percent} of small-angle scattering articles published in 2018.
+\noindent The use of molecular dynamics simulations to help analyse and interpret experimental data from small-angle scattering and diffraction studies has grown significantly over the past ten years \cite{pan_molecular_2012,boldon_review_2015,hub_interpreting_2018,ivanovic_temperature-dependent_2018,east_structural_2016,wall_conformational_2014,wall_internal_2018,satoh_multiple_2015},
+with the percentage of small-angle scattering publications that mention molecular dynamics reaching more than \SI{20}{\percent} in 2018 (Fig.~\ref{fig:growth}).
+Users of scattering and diffraction techniques often have backgrounds in experimental science, and may have received little formal training in the theory or practice of computational modelling.
+This can lead to molecular dynamics simulations being used as a ``black box'', without understanding the underlying methodologies, or considering possible sources of error.
+The use of molecular simulations without any technical understanding can lead to unintended but severe errors.
+To help support researchers use molecular dynamics simulation in their analysis of scattering data, while reducing this risk of modelling errors, a number of software tools, such as WAXSiS and SASSIE \cite{chen_validating_2014,knight_waxsis_2015,perkins_atomistic_2016}, have been developed that present easy-to-use, graphical, web-based user interfaces.
 
-Users of scattering and diffraction techniques often have backgrounds in experimental science, with little or no formal training in the theory or practice of computational modelling.
-This can lead to molecular dynamics simulations being used as a ``black box'', with little understanding of the underlying methodologies, or consideration of possible sources of erroneous results.
-The use of molecular simulations without at least some understanding of the techniques can lead to the unintended inclusion of severe, systematic errors.
-The challenge of enabling researchers to use molecular dynamics simulation in their analysis of scattering data, while reducing this risk of modelling errors, has lead to the development of software tools, such as WAXSiS and SASSIE \cite{chen_validating_2014,knight_waxsis_2015,perkins_atomistic_2016}, that present easy-to-use, graphical, web-based interfaces to operate the software.
-
-A complementary strategy to help avoid researchers inadvertently using erroneous simulation results is targetted educational resources and activities, such as lectures or workshops that introduce molecular simulation to audiences of scattering and diffraction users.
-One example is the annual ISIS Neutron Training Course, which includes a module entitled ``An Introduction to Molecular Dynamics for Neutron Scattering''.
-This covers the fundamentals of classical molecular dynamics simulation, presents applications of these methods in neutron science, and allows students to gain practical experience with the SASSIE software package \cite{perkins_atomistic_2016}.
+A complementary approach is to organise educational activities, such as lectures or workshops, tailored to introduce molecular simulation techniques to audiences of scattering and diffraction users.
+One example is the annual ISIS Neutron Training Course, which includes a module titled ``An Introduction to Molecular Dynamics for Neutron Scattering''.
+This module covers the fundamentals of classical molecular dynamics simulation, presents applications of these methods in neutron science, and gives students practical hands-on experience with the SASSIE software package \cite{perkins_atomistic_2016}.
 
 %
 \begin{figure}
@@ -79,31 +78,31 @@ This covers the fundamentals of classical molecular dynamics simulation, present
 \end{figure}
 %
 
-While lectures and workshops are a valuable approach to education and training, participation can be limited due to difficulties attending in person (due to location or cost) or physical limits on student numbers.
-An alternative educational medium gaining popularity within scientific and engineering communities is technology-enhanced open educational resources (OERs).
-These are courses, lectures, or learning resources published online that are freely available for use by anyone. In addition to their broad accessibility, these resources adopt permissive ``open'' copyright licences that permit their use in the ``5R activities'': retain, reuse, revise, remix, and redistribute \cite{wiley_open_2018}.
-The act of publishing a resouce as an OER increases its reach and cumulative impact, because others may take it for immediate use in their own teaching, or freely modify the material to suit their needs.
-The Jupyter Notebook framework \cite{kluyver_jupyter_2016} has become a popular platform for OERs that teach computational skills, because it allows authors to include instructional text, images, and other media, alongside executable code examples, in an example of ``literate programming'' \cite{knuth_literate_1984}.
-This format encourages students to directly interact with the code by editing and rerunning this within the source document \cite{barba_cybertraining_2017}.
+While lectures and workshops are an effective tool for education and training, participation can be limited due to difficulties attending in person (due to location or cost) or physical limits on student numbers.
+An alternative educational strategy  gaining popularity within scientific and engineering communities is the publication of technology-enhanced open educational resources (OERs).
+These are courses, lectures, or learning resources published online that are freely available for use by anyone. In addition to their broad accessibility, these resources have permissive ``open'' copyright licences that allow their use in the ``5R activities'': retain, reuse, revise, remix, and redistribute \cite{wiley_open_2018}.
+Publishing a resouce as an OER increases its reach and impact, because others may use it in their own teaching not only in its original form, but are free to modify, and redistribute, the material to better suit their aims.
+The Jupyter Notebook framework \cite{kluyver_jupyter_2016} has become a popular platform for OERs that teach computational skills, because it allows authors to include instructional text, images, and other media, alongside executable editable code, in an example of ``literate programming'' \cite{knuth_literate_1984}.
+This format encourages students to directly interact with code examples by running, editing, and rerunning these within the source document \cite{barba_cybertraining_2017}, supporting exploratory experiential learning \cite{Papert_Mindstorms1993}.
 
-In this article, we present an online, open-source, interactive learning resource aimed to introduce members of the scattering and diffraction community to molecular dynamics simulations.
-This open educational resource is comprised of six lessons that introduce classical molecular dynamics methods, and show how these can be used in the context of scattering in a multi-modal analysis fashion
-To provide simple, but computationally ``real'' examples of simulations, we use the open-source Python library pylj \cite{mccluskey_pylj_2018} to demonstrate visually and programmatically the conceptual relationships between these two techniques.
-Here, we discuss the structure of the resource and describe how a student\footnote{In this work \emph{the student} refers to anyone working through the OER, regardless of career position.} may get the most from the resource.
+Here, we present an online, open-source, interactive learning resource written to introduce members of the scattering and diffraction community to molecular dynamics simulations.
+This OER comprises six lessons that introduce classical molecular dynamics methods, and show how these can be used in the context of scattering [can this be more specific?] in a multi-modal analysis.
+We use the open-source Python library pylj \cite{mccluskey_pylj_2018} to provide simple, but computationally authentic, examples of simulations, that demonstrate visually and programmatically the conceptual relationships between simulation and scattering techniques.
+In this article, we discuss the structure of the resource and describe how a student may get the most from the resource \footnote{In this work \emph{the student} refers to anyone working through the OER, regardless of career position.}.
 
 \section{Assumed prior knowledge}
 
-The OER, entitled \emph{``The interaction between simulation and scattering''} makes use of the Python programming language, which allows interactive examples of the mathematical and algorithm content to be included.
-A result of this is that to be able to fully utilise the resource some knowledge of, or willingness to learn, Python is required.
-However, we have attempted to develop the resource in such a fashion that an in-depth knowledge of Python is not required.
-It is anticipated that the users of this resource would have some familiarity with undergraduate level chemistry or physics, alongside a commensurate understanding of mathematics.
-This is particularly important when considering the nature, and chemical rationale, of classical interaction potentials.
+The OER, entitled \emph{``The Interaction Between Simulation and Scattering''} makes use of the Python programming language to include interactive examples of mathematical and algorithmic content.
+To be able to fully use this resource, therefore, requires some knowledge of, or willingness to learn, Python.
+We have, however, attempted to design the resource in such a fashion that an in-depth knowledge of Python is not a prerequisite.
+It is anticipated that the users of this resource have some experience of at least undergraduate level chemistry or physics, and a commensurate level of mathematical understanding.
+This background knowledge will be particularly important for the sections dealing with the functional form and chemical basis of classical interaction potentials.
 
 \section{Resource construction}
 
 The resource is currently available online, at \url{http://pythoninchemistry.org/sim_and_scat}.
 These webpages were written as a series of Jupyter Notebooks and Markdown files, which were then compiled using the \texttt{jupyter-book} tool \cite{lau_jupyter/jupyter-book_2019}.
-This system allows Python code blocks to be included alongside the textual content, providing algorihtmic details whilst also facilitating interactivity, though both Thebelab and BinderHub integrations \cite{ragan-kelley_minrk/thebelab_2019,ragan-kelley_jupyterhub/binderhub_2019,jupyter_binder_2018}.
+This system allows Python code blocks to be included alongside the textual content, providing algorithmic details whilst also facilitating interactivity, though both Thebelab and BinderHub integrations \cite{ragan-kelley_minrk/thebelab_2019,ragan-kelley_jupyterhub/binderhub_2019,jupyter_binder_2018}.
 Interacting with the resource in this fashion will aloow the student to either run the Python code directly in the resource interface (Thebelab), or easily launch a MyBinder window to more intensive visualisations (such as pylj).
 We believe that the interactive nature of the resource will facilitate understanding allowing the students to gain more than would be obtained from a traditional lecture or handout material \cite{knuth_literate_1984}.
 
