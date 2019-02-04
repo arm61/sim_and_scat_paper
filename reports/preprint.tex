@@ -86,7 +86,7 @@ The Jupyter Notebook framework \cite{kluyver_jupyter_2016} has become a popular 
 This format encourages students to directly interact with code examples by running, editing, and rerunning these within the source document \cite{barba_cybertraining_2017}, supporting exploratory experiential learning \cite{papert_mindstroms_1993}.
 
 Here, we present an online, open-source, interactive learning resource written to introduce members of the scattering and diffraction community to molecular dynamics simulations.
-This OER comprises six lessons that introduce classical molecular dynamics methods, and show how these can be used in the context of scattering [can this be more specific?] in a multi-modal analysis.
+This OER comprises six lessons that introduce classical molecular dynamics methods, and show how these can be used these may be used to assist in the analysis of experimental scattering data by the calculation of a simulated scattering profile from the molecular dynamics simulation.
 We use the open-source Python library pylj \cite{mccluskey_pylj_2018} to provide simple, but computationally authentic, examples of simulations, that demonstrate visually and programmatically the conceptual relationships between simulation and scattering techniques.
 In this article, we discuss the structure of the resource and describe how a student may get the most from the resource \footnote{In this work \emph{the student} refers to anyone working through the OER, regardless of career position.}.
 
@@ -105,7 +105,8 @@ Secondly as the source-code repository used to build these webpages, hosted at \
 The source content consists of a set of Jupyter Notebooks and Markdown files, which are automatically compiled using the \texttt{jupyter-book} tool \cite{lau_jupyter/jupyter-book_2019} to generate the web version.
 This system allows the resulting webpages to include text, equations, and figures, which we use to describe key concepts and to explain details of algorithms, as well as Python code blocks, which we use to provide specific examples. The webpages have Thebelab and BinderHub integrations \cite{ragan-kelley_minrk/thebelab_2019, ragan-kelley_jupyterhub/binderhub_2019, jupyter_binder_2018}, which allow students to launch interactive versions of these webpages that allow execution and editing of the included Python code.
 We believe that the ability to read the resource as an ``interactive document'' will help students to develop a deeper understanding of the materials than they would from a traditional static document.
-The resource is provided under a CC-BY license \cite{noauthor_creative_2019} [Note, expand to explain the use of two resources (both permissive)]. This open-source license allows readers to reuse or remix the material to enhance their own educational platform, and for secondary authors to contribute to improving the source material.the material to be anyone to use the material to enhance their own educational platform and experts in the field may contribute to improving the resource.
+The resource is provided under a CC-BY license \cite{noauthor_creative_2019}, while the \texttt{jupyter-book} software is shared under an MIT license \cite{noauthor_mit_2019}, both of which are open and highly permissive.
+This open-source license allows readers to reuse or remix the material to enhance their own educational platform, and for secondary authors to contribute to improving the source material.
 
 \section{Resource outline}
 
@@ -128,8 +129,8 @@ Finally, we mention mixing rules; again discussing the possible problems that a 
 \subsection{Molecular dynamics}
 
 Having introduced the concept of classical interatomic potentials, we then discuss how these are used in molecular dynamics simulations.
-We go through different aspects of the method [specifics?] to build up a one-dimensional NVE (constant number, volume, and energy) molecular dynamics simulation, using the Velocity-Verlet algorithm and the Lennard-Jones potential model \cite{swope_computer_1982,lennard-jones_determination_1924}.
-The molecular dynamics algorithm is introduced in terms of Newton's laws of motion and the generalised equations of motion.
+We work through how a one-dimensional NVE (constant number, volume, and energy) molecular dynamics simulation may be built, using the Velocity-Verlet algorithm and the Lennard-Jones potential model \cite{swope_computer_1982,lennard-jones_determination_1924}.
+The Velocity-Verlet algorithm is introduced in terms of Newton's laws of motion and the generalised equations of motion.
 Finally, we discuss a range of key factors that can affect molecular dynamics simulations, including including choice of simulation ensembles, setting the range cut-off for an interatomic potential, and the use of periodic boundary conditions.
 
 \subsection{\texttt{pylj} and the interaction with scattering}
@@ -138,8 +139,9 @@ The final aspect of the resource covers using molecular dynamics simulations to 
 This is presented as a practical example, using the open-source \texttt{pylj} package \cite{mccluskey_pylj_2018}.
 We demonstrate a two-dimensional molecular dynamics simulation of argon particles interacting through a Lennard-Jones potential.
 The student is first shown a working \texttt{pylj} simulation and invited to interact with the simulation and the custom plotting functionality of \texttt{pylj}.
-In the final lessons, we present the Debye equation \cite{debye_zerstreuung_1915} [And it's use in combination with MD data?], and the student is invited to observe the effect of simulation temperature on the resulting scattering profile.
-We finish by discussing alternative, faster, algorithms for calculating scattering profiles, such as the Fibonacci sequence or Golden Vectors methods \cite{svergun_solution_1994,watson_rapid_2013} [Why is Fibonacci sequence not title case, but Golden Vectors is?].
+In the final lessons, we present the Debye equation \cite{debye_zerstreuung_1915}, and it's use in the simulation of scattering data from simulation.
+The student is invited to observe the effect of simulation temperature on the resulting scattering profile.
+We finish by discussing alternative, faster, algorithms for calculating scattering profiles, such as the Fibonacci Sequence or Golden Vectors methods \cite{svergun_solution_1994,watson_rapid_2013}.
 
 \section{Future outlook}
 
