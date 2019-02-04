@@ -48,7 +48,6 @@ B. J. M. acknowledges support from the Royal Society (Grant No. UF130329).
 ## Project Organization
 
     .
-    ├── AUTHORS.md
     ├── LICENSE         # CC-BY-SA-4.0
     ├── README.md       # You are here
     ├── Snakefile       # Makefile to outline workflow
