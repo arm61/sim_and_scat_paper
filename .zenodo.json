@@ -1,0 +1,45 @@
+{
+  "title": "sim_and_scat_paper",
+  "creators": [{
+    "name": "McCluskey, Andrew R.", 
+    "affiliation": "Department of Chemistry, University of Bath, Claverton Down, Bath, BA2 7AY, UK.; Diamond Light Source, Harwell Campus,. Didcot, OX11 0DE, UK.",
+    "orcid": "0000-0003-3381-5911"},
+  {
+    "name": "Grant, James", 
+    "affiliation": "Computing Services, University of Bath, Claverton Down, Bath, BA2 7AY, UK.",
+    "orcid": "0000-0003-1362-2055"},
+  {
+    "name": "Symington, Adam R.", 
+    "affiliation": "Department of Chemistry, University of Bath, Claverton Down, Bath, BA2 7AY, UK.",
+    "orcid": "0000-0001-6059-497X"},
+  {
+    "name": "Snow, Tim", 
+    "affiliation": "Diamond Light Source, Harwell Campus,. Didcot, OX11 0DE, UK.",
+    "orcid": "0000-0001-7146-6885"},
+  {
+    "name": "Doutch, James", 
+    "affiliation": "ISIS Facility, Rutherford Appleton Laboratory, STFC, Chilton, Didcot, OX11 0QX, UK."},
+  {
+    "name": "Morgan, Benjamin J.", 
+    "affiliation": "Department of Chemistry, University of Bath, Claverton Down, Bath, BA2 7AY, UK.",
+    "orcid": "0000-0002-3056-8233"},
+  {
+    "name": "Parker, Stephen C.", 
+    "affiliation": "Department of Chemistry, University of Bath, Claverton Down, Bath, BA2 7AY, UK.",
+    "orcid": "0000-0003-3804-0975"},
+  {
+    "name": "Edler, Karen J.", 
+    "affiliation": "Department of Chemistry, University of Bath, Claverton Down, Bath, BA2 7AY, UK.",
+    "orcid": "0000-0001-5822-0127"
+  }],
+  "description": "ESI for \"Introducing classical molecular dynamics simulation to users of scattering\" ",
+  "access_rights": "open",
+  "license": "CC BY-SA 4.0"
+  "grants": [{
+    "funder": "University of Bath & Diamond Light Source",
+    "code": "STU0149"},
+  {
+    "funder": "The Royal Society",
+    "code": "UF130329"
+  }]
+}
