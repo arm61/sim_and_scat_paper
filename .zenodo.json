@@ -34,7 +34,7 @@
   }],
   "description": "ESI for \"Introducing classical molecular dynamics simulation to users of scattering\" ",
   "access_rights": "open",
-  "license": "CC BY-SA 4.0"
+  "license": "CC BY-SA 4.0",
   "grants": [{
     "funder": "University of Bath & Diamond Light Source",
     "code": "STU0149"},
