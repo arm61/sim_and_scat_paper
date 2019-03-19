@@ -81,7 +81,7 @@ This module covers the fundamentals of classical molecular dynamics simulation, 
 \begin{figure}
 \label{fig:growth}
 \includegraphics[width=0.48\textwidth]{figures/chem_data_py.pdf}
-\caption{The annual percentage of publications that mention ``small angle scattering'' that also mention ``molecular dynamics'', determined from the numbers of matching Google Scholar results.}
+\caption{The percentage of publications that mention ``small angle scattering'' that also mention ``molecular dynamics'', determined from the numbers of matching Google Scholar results.}
 \end{figure}
 %
 
@@ -93,7 +93,7 @@ The Jupyter Notebook framework \cite{kluyver_jupyter_2016} has become a popular 
 This format encourages students to directly interact with code examples by running, editing, and rerunning these within the source document \cite{barba_cybertraining_2017}, supporting exploratory experiential learning \cite{papert_mindstroms_1993}.
 
 Here, we present an online, open-source, interactive learning resource written to introduce members of the scattering and diffraction community to molecular dynamics simulations.
-This OER comprises five lessons that introduce classical molecular dynamics methods and show how these can be used these may be used to assist in the analysis of experimental scattering data by the calculation of a simulated scattering profile from the molecular dynamics simulation.
+This OER comprises five lessons that introduce classical molecular dynamics methods and show how these can be used to assist in the analysis of experimental scattering data by the calculation of a simulated scattering profile from the molecular dynamics simulation.
 We use the open-source Python library pylj \cite{mccluskey_pylj_2018,mccluskey_arm61/pylj_2019-2} to provide simple, but computationally authentic, examples of simulations, that demonstrate visually and programmatically the conceptual relationships between simulation and scattering techniques.
 In this article, we discuss the structure of the resource and describe how a student may get the most from the resource \footnote{In this work \emph{the student} refers to anyone working through the OER, regardless of career position.}.
 
@@ -113,7 +113,7 @@ The source content consists of a set of Jupyter Notebooks and Markdown files, wh
 This system allows the resulting webpages to include text, equations, and figures, which we use to describe key concepts and to explain details of algorithms, as well as Python code blocks, which we use to provide specific examples. The web pages have Thebelab and BinderHub integrations \cite{ragan-kelley_minrk/thebelab_2019, ragan-kelley_jupyterhub/binderhub_2019, jupyter_binder_2018}, which allow students to launch interactive versions of these web pages that allow execution and editing of the included Python code.
 We believe that the ability to read the resource as an ``interactive document'' will help students to develop a deeper understanding of the materials than they would from a traditional static document.
 The resource is provided under a CC-BY license \cite{creative_commons_creative_2019}, while the \texttt{jupyter-book} software is shared under an MIT license \cite{open_source_mit_2019}, both of which are open and highly permissive.
-This open-source license allows readers to reuse or remix the material to enhance their own educational platform, and for secondary authors to contribute to improving the source material.
+This allows readers to reuse or remix the material to enhance their own educational platform, and for secondary authors to contribute to improving the source material.
 
 \section{Resource outline}
 
@@ -130,7 +130,7 @@ This page also includes a list of authors and contributors.
 After a brief introduction, this section introduces concepts related to classical simulation methods.
 This includes the use of interatomic potential functions, alongside some examples, such as the Lennard-Jones and Buckingham potential models \cite{lennard-jones_determination_1924,buckingham_classical_1938}.
 We then introduce the problem of parameterising a potential model, including the use of higher accuracy quantum mechanical calculations to do so.
-The presence of off-the-shelf, general potential models are discussed; with the caveat that they may still require system specific optimisations.
+The presence of off-the-shelf, general potential models are discussed; with the caveat that they may still require system specific optimisation.
 Finally, we mention mixing rules; again discussing the possible problems that a user may encounter if applying these blindly to specific systems.
 
 \subsection{Molecular dynamics}
@@ -146,7 +146,7 @@ The final aspect of the resource covers using molecular dynamics simulations to 
 This is presented as a practical example, using the open-source \texttt{pylj} package \cite{mccluskey_pylj_2018,mccluskey_arm61/pylj_2019-2}.
 We demonstrate a two-dimensional molecular dynamics simulation of argon particles interacting through a Lennard-Jones potential.
 The student is first shown a working \texttt{pylj} simulation and invited to interact with the simulation and the custom plotting functionality of \texttt{pylj}.
-The concept of a radial distribution function (RDF) is then shown, and the students are given the opportunity to run some pylj simulations with the RDF being output alongside the simulation window.
+The concept of a radial distribution function (RDF) is then shown, and the students are given the opportunity to run some \texttt{pylj} simulations with the RDF being output alongside the simulation window.
 Next we present the Debye equation \cite{debye_zerstreuung_1915} and show how it may be used to calculate scattering data from a simulation.
 The student is invited to observe the effect of simulation temperature on the resulting scattering profile.
 We finish by discussing alternative, faster, algorithms for calculating scattering profiles, such as the Fibonacci Sequence or Golden Vectors methods \cite{svergun_solution_1994,watson_rapid_2013}.
@@ -154,18 +154,19 @@ We finish by discussing alternative, faster, algorithms for calculating scatteri
 \subsection{``Real'' simulation and scattering}
 
 Having shown the development of a scattering profile from an idealised system, we then direct the student to a popular resource for the GROMACS \cite{berendsen_gromacs_1995} molecular dynamics software.
-This resource gives a quick introduction to using GROMACS to simulate a lyzosyme molecule in buffer \cite{lemkul_gromacs_2019}, student may then use their own simulated trajectory or one that can be downloaded from the OER.
-We show how the system may be visualised, introduce the MDAnalysis Python package for the analysis of molecular dynamics trajectories \cite{michaud-agrawal_mdanalysis_2011,gowers_mdanalysis_2016}, and show the scattering profile developed from the lysozyme simulation compared with experimental data \cite{franke_correlation_2015}.
+This resource gives a quick introduction to using GROMACS to simulate a lyzosyme molecule in buffer \cite{lemkul_gromacs_2019}, the student may then use their own simulated trajectory or one that can be downloaded from the OER.
+We show how the system may be visualised, introduce the \texttt{MDAnalysis} Python package for the analysis of molecular dynamics trajectories \cite{michaud-agrawal_mdanalysis_2011,gowers_mdanalysis_2016}, and show the scattering profile developed from the lysozyme simulation compared with experimental data \cite{franke_correlation_2015}.
 The module finishes by pointing the student to resources to more easily resolve scattering data from molecular simulation, such as SASSIE and CRYSOL \cite{perkins_atomistic_2016,svergun_crysol_1995}.
 The focus of this module is to introduce simulation methodologies to users of scattering to aid their understanding, not to derive the exact mechanics of the calculation of scattering from simulation.
-Resources for this purpose already exist and have well developed tutorials, so it is not necessary to recreate such software here.
+Resources for this purpose already exist and have well developed tutorials, so it is not necessary to recreate such software here \cite{perkins_atomistic_2016,svergun_crysol_1995}.
 
 
 \section{Future outlook}
 
-We hope that publishing this material as an OER will promote interest from other parties towards reuse, and remixing the material for their own educational purposes.
-We also hope to implement this material within training at the ISIS Neutron and Muon Source as well as Diamond Light Source.
-Finally, it is hoped, \textit{via} student and community feedback, that the implementation, content, and pedagogical approach of this resource can be increased over time. We hope that this resource will benefit students and researchers interested in combining molecular dynamics analysis with scattering and diffraction experiments.
+The aim of this resource is benefit students and researchers interested in combining molecular dynamics analysis with scattering and diffraction experiments.
+Our intention in publishing this material as an OER is to promote interest from other parties towards reuse, and remixing the material for their own educational purposes.
+We plan to implement this material within training at the ISIS Neutron and Muon Source as well as Diamond Light Source.
+Finally, it is hoped, \textit{via} student and community feedback, that the implementation, content, and pedagogical approach of this resource can be increased over time.
 
 \section{Author contributions}
 
