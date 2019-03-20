@@ -54,7 +54,7 @@ fig, ax1 = plt.subplots(figsize=(4, 2.5))
 ax1.plot(df['years'], df['sasmd'] / df['sas'] * 100, 'o',
          color='black', markersize=5)
 ax1.set_xlabel('Year')
-ax1.set_ylabel('Percentage of Publications')
+ax1.set_ylabel('Percentage of Publications/%')
 ax1.set_xticks([2002, 2006, 2010, 2014, 2018])
 ax1.set_yticks([0, 10, 20])
 plt.tight_layout()
