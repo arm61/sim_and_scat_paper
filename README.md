@@ -1,4 +1,4 @@
-# ESI for "Introducing classical molecular dynamics simulation to users of scattering"
+# ESI for "An introduction to classical molecular dynamics simulation for experimental scattering users"
 
 [![DOI](https://zenodo.org/badge/158192967.svg)](https://zenodo.org/badge/latestdoi/158192967) [![arXiv](https://img.shields.io/badge/arXiv-1902.01324-orange.svg)](https://arxiv.org/abs/1902.01324) [![License](https://img.shields.io/github/license/arm61/lipids_at_airdes.svg?color=lightgrey)](https://github.com/arm61/lipids_at_airdes/blob/master/LICENSE)
 
@@ -6,7 +6,7 @@
 
 &ast;[a.r.mccluskey@bath.ac.uk](mailto:a.r.mccluskey@bath.ac.uk)/[andrew.mccluskey@diamond.ac.uk](mailto:aandrew.mccluskey@diamond.ac.uk) & [b.j.morgan@bath.ac.uk](mailto:b.j.morgan@bath.ac.uk)
 
-This is the electronic supplementary information (ESI) associated with the publication "Introducing classical molecular dynamics simulation to users of scattering".
+This is the electronic supplementary information (ESI) associated with the publication "An introduction to classical molecular dynamics simulation for experimental scattering users".
 This ESI provides full details of the analyses performed in the work and access to an automated analysis workflow, through this we aim to provide better access to analysis reproduciblility.
 For more information about reproducible workflows in Python, check out [Tania Allard's talk from Pycon2018](http://bitsandchips.me/Talks/PyCon.html#/title).
 
