@@ -6,6 +6,8 @@
 
 &ast;[a.r.mccluskey@bath.ac.uk](mailto:a.r.mccluskey@bath.ac.uk)/[andrew.mccluskey@diamond.ac.uk](mailto:aandrew.mccluskey@diamond.ac.uk) & [b.j.morgan@bath.ac.uk](mailto:b.j.morgan@bath.ac.uk)
 
+*An open educational resource to engage users of scattering techniques in classical simulation.*
+
 This is the electronic supplementary information (ESI) associated with the publication "An introduction to classical molecular dynamics simulation for experimental scattering users".
 This ESI provides full details of the analyses performed in the work and access to an automated analysis workflow, through this we aim to provide better access to analysis reproduciblility.
 For more information about reproducible workflows in Python, check out [Tania Allard's talk from Pycon2018](http://bitsandchips.me/Talks/PyCon.html#/title).
