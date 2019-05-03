@@ -6,7 +6,7 @@
 
 &ast;[a.r.mccluskey@bath.ac.uk](mailto:a.r.mccluskey@bath.ac.uk)/[andrew.mccluskey@diamond.ac.uk](mailto:aandrew.mccluskey@diamond.ac.uk) & [b.j.morgan@bath.ac.uk](mailto:b.j.morgan@bath.ac.uk)
 
-[![ToCFigure](https://raw.githubusercontent.com/arm61/sim_and_scat_paper/master/toc_figure.png)](https://doi.org/10.1107/S1600576719004333)
+[![ToCFigure](https://raw.githubusercontent.com/arm61/sim_and_scat_paper/master/toc.png)](https://doi.org/10.1107/S1600576719004333)
 *An open educational resource to engage users of scattering techniques in classical simulation.*
 
 This is the electronic supplementary information (ESI) associated with the publication "An introduction to classical molecular dynamics simulation for experimental scattering users".
